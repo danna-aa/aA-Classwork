@@ -35,49 +35,49 @@ class Board
   end
 
   # loop through all of opponent's valid moves, and see if king is covered
-  def in_check?(color)
+  # def in_check?(color)
 
-    king_pos = find_king(color)
-    @rows.each do |row|
-      row.each do |spot|
-        next if spot.is_a?(NullPiece)
-        if spot.color != color
-          return true if spot.moves.include?(king_pos)
-        end
-      end
-    end
-    false
-  end
+  #   king_pos = find_king(color)
+  #   @rows.each do |row|
+  #     row.each do |spot|
+  #       next if spot.is_a?(NullPiece)
+  #       if spot.color != color
+  #         return true if spot.moves.include?(king_pos)
+  #       end
+  #     end
+  #   end
+  #   false
+  # end
 
   # loop through all of the king's valid moves, and see if all of those moves
   # are covered by an opponent piece.
-  def checkmate?(color)
-    if in_check?(color)
-      all_opponent_moves = []
-      @rows.each do |row|
-        row.each do |spot|
-          all_opponent_moves.concat(spot.moves) if spot.color != color
-        end
-      end
-      #check if the king can move
-      king_pos = find_king
-      valid_king_moves = self[king_pos].moves
-      king_can_move = valid_king_moves.all? do |king_move|
-        all_opponent_moves.include?(king_move)
-      end
-      return false if king_can_move
+  # def checkmate?(color)
+  #   if in_check?(color)
+  #     all_opponent_moves = []
+  #     @rows.each do |row|
+  #       row.each do |spot|
+  #         all_opponent_moves.concat(spot.moves) if spot.color != color
+  #       end
+  #     end
+  #     #check if the king can move
+  #     king_pos = find_king
+  #     valid_king_moves = self[king_pos].moves
+  #     king_can_move = valid_king_moves.all? do |king_move|
+  #       all_opponent_moves.include?(king_move)
+  #     end
+  #     return false if king_can_move
 
-      #check if own pieces can save king
-      @rows.each do |row|
-        row.each do |spot|
-          return false if spot.color == color && !spot.valid_moves.empty?
-        end
-      end
-      return true
+  #     #check if own pieces can save king
+  #     @rows.each do |row|
+  #       row.each do |spot|
+  #         return false if spot.color == color && !spot.valid_moves.empty?
+  #       end
+  #     end
+  #     return true
 
-    end
-    false
-  end
+  #   end
+  #   false
+  # end
 
 
 

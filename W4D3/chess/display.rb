@@ -44,19 +44,19 @@ board = Board.new
 display = Display.new(board)
 loop do
   display.render
-  if board.in_check?(:W)
-    puts "White king is in check"
-    if board.checkmate?(:W)
-      #set game over
-      puts "Checkmate, black player wins"
-    end
-  elsif board.in_check?(:B)
-    puts "Black king is in check"
-    if board.checkmate?(:B)
-      #set game over
-      puts "Checkmate, white player wins"
-    end
-  end
+  # if board.in_check?(:W)
+  #   puts "White king is in check"
+  #   if board.checkmate?(:W)
+  #     #set game over
+  #     puts "Checkmate, black player wins"
+  #   end
+  # elsif board.in_check?(:B)
+  #   puts "Black king is in check"
+  #   if board.checkmate?(:B)
+  #     #set game over
+  #     puts "Checkmate, white player wins"
+  #   end
+  # end
 
 
   start_pos = display.cursor.get_input
