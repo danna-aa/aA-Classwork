@@ -1,0 +1,19 @@
+<h1> ALL THE CATS IN THE WORLD </h1>
+
+<a href="<%=new_cat_url%>">Create a Cat</a>
+
+<ul><% @cats.each do |cat|%>
+    <li>
+      <ul>
+        <li> <%= cat.name %></li>
+        <li> <%= cat.age %></li>
+        <li> <%= cat.birth_date %></li>
+        <li> <%= cat.color %></li>
+        <li> <%= cat.sex %></li>
+        <li> <%= cat.description %></li>
+        <a href="<%=cat_url(cat)%>">RENT <%=cat.name.upcase%></a>
+      </ul>
+    </li>
+
+  <%end%>
+</ul>

@@ -1,0 +1,38 @@
+<h2>New Cat</h2>
+
+<form action="<%= cats_url%>" method="post">
+  <input type="hidden" name="_method" value="patch">
+  <label for="name">Name:
+    <input type="text" id="name" name="cat[name]" value=<%@cat.name%>>
+  </label>
+  <br>
+
+  <label for="birth_date">Birth Date:
+    <input type="date" id="birth_date" name="cat[birth_date]" value=<%@cat.birth_date%>>
+  </label>
+   <br>
+
+  <label for="color">Color: 
+  
+    <select name="cat[color]" id="color">
+      <option disabled selected>--select--</option>
+      <option value="black">BLACK</option>
+      <option value="white">WHITE</option>
+      <option value="orange">ORANGE</option>
+      <option value="brown">BROWN</option>
+    </select>
+    </label>
+   <br>
+
+  <label for="cat_sex_male">MALE</label>
+  <input type="radio" name="cat[sex]" value="M" id="cat_sex_male">
+  <label for="cat_sex_male">FEMALE</label>
+  <input type="radio" name="cat[sex]" value="F" id="cat_sex_female">
+  <br>
+
+  <label for="description">Description:
+    <textarea name="cat[description" id="description" cols="30" rows="3"></textarea>
+  </label>
+  <br>
+  <input type="submit" value="Submit">
+</form>
