@@ -1,0 +1,13 @@
+<form action="<%= users_url %>" method="post">
+  <input type="hidden" name="_method" value="post">
+
+  <label for="user_name">User_name:
+    <input type="text" id="user_name" name="user[user_name]" value="<%= @user.user_name %>">
+  </label>
+  <br>
+  <label for="password">Password:
+    <input type="password" id="password" name="user[password]" value="<%=@user.password%>">
+  </label>
+  <br>
+  <input type="submit" value="Sign Up to Rent a Cat">
+</form>

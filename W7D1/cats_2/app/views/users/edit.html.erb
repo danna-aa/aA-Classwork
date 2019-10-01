@@ -1,0 +1,15 @@
+<form action="<%= user_url(@user.id) %>" method="post">
+  <input type="hidden" name="_method" value="patch">
+
+  <label for="user_name">User_name:
+    <input type="text" id="user_name" name="user[user_name]" value="<%= @user.user_name %>">
+  </label>
+  <br>
+
+  <label for="password">Password:
+    <input type="text" id="password" name="user[password]" value="<%= @user.password %>">
+  </label>
+  <br>
+
+  <input type="submit" value="Update Your User Account">
+</form>

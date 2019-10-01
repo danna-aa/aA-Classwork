@@ -1,0 +1,33 @@
+<% if type == :new %>
+  <% action_url = users_url %>
+  <% button_text = "Create User" %>
+<% else %>
+  <% action_url = user_url(user) %>
+  <% button_text = "Update User" %>
+<% end %>
+
+<form action="<%= action_url %>" method="post">
+  <% if type == :edit %>
+    <input type="hidden" name="_method" value="patch">
+  <% end %>
+
+  <ul>
+    <% user.errors.full_messages.each do |message| %>
+      <li><%= message  %></li>
+    <% end %>
+  </ul>
+
+  <label for="user_name">User_name:
+    <input type="text" id="user_name" name="user[user_name]" value="<%= user.user_name %>">
+  </label>
+  <br>
+
+  <% if type == :new %>
+    <br>
+    <label for="password">Password:
+      <input type="password" id="password" name="user[password]" value="">
+    </label>
+  <% end %>
+  <br>
+  <input type="submit" value="<%= button_text %>">
+</form>
