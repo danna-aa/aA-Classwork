@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>MusicApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
+  </head>
+
+  <body>
+  <header><h1>Music App with No Music</h1></header>
+      <div class="abc">
+    <% if logged_in? %>
+      <h3>Welcome, <%= current_user.email %>!</h3>
+    <form action="<%=session_url%>" method="post">
+      <input type="hidden" name="_method" value="delete">
+      <input type="submit" value="Sign Out">
+    </form>
+    <%end%>
+    <%= flash.now[:errors] if flash.now[:errors] %>
+    </div>
+    <%= yield %>
+  </body>
+</html>
