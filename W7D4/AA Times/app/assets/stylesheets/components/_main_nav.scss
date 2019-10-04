@@ -1,0 +1,53 @@
+.main-nav {
+  display: flex;
+  // flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+	text-transform: uppercase;
+	font-size: 11px;
+  text-align: center;
+  font-weight: 700;
+}
+
+.left-nav > ul,
+.right-nav > ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  // align-content: space-around;
+  // justify-content: space-around;
+}
+
+.left-nav > ul > li {
+  // font-family: ;
+  // font-size: ;
+  // text-transform: ;
+  margin: 5px 25px ;
+}
+
+.right-nav > ul > li {
+  // font-family: ;
+  // font-size: ;
+  // text-transform: ;
+  margin: 5px 2px;
+}
+
+.right-nav > ul > li:last-of-type {
+  font-size: 20px;
+}
+
+.left-nav > ul > li:hover,
+.right-nav > ul > li:last-of-type:hover {
+  color: gray;
+  transition: ease 0.3s;
+}
+
+.left-nav span {
+
+}
+
+
+.right-nav i {
+
+}

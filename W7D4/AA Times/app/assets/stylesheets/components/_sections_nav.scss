@@ -1,0 +1,29 @@
+.sections-nav-ul {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	border-bottom: 2px solid lightgrey;
+  position: relative;
+}
+
+.sections-nav-ul li {
+  display: flex;
+  margin: 12px;
+  font-family: nyt-franklin, helvetica, arial, sans-serif;
+  color: black;
+}
+
+.sections-nav-ul a {
+  text-decoration: none;
+}
+
+.sections-nav-ul li:hover {
+  background-color: lightgray;
+  transition: ease 0.3s;
+  // text-decoration: underline;
+}
+
+.all:hover {
+  text-decoration: underline;
+  background-color: white !important; 
+}
