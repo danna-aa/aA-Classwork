@@ -1,0 +1,49 @@
+Marquee {
+  color: red;
+  font-family: sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2em;
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.tile {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 1px solid gray;
+  background-color: whitesmoke;
+}
+
+.o {
+
+}
+
+.b {
+  background-color: thistle;
+}
+
+.e {
+  background-color: rgb(181, 227, 194);
+}
+
+.f {
+  background-color: rgb(242, 228, 182);
+}
